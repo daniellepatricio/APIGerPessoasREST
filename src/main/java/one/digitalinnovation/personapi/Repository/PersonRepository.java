@@ -1,4 +1,4 @@
-package one.digitalinnovation.Repository;
+package one.digitalinnovation.personapi.Repository;
 import one.digitalinnovation.personapi.Entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 

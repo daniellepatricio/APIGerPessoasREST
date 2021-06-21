@@ -2,12 +2,12 @@ package one.digitalinnovation.Controller;
 
 import one.digitalinnovation.DTO.Response.MessageResponseDTO;
 import one.digitalinnovation.Repository.PersonRepository;
+import one.digitalinnovation.personapi.Entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import one.digitalinnovation.personapi.Entity.Person;
 
 /*import one.digitalinnovation.personapi.dto.request.PersonDTO;
 
