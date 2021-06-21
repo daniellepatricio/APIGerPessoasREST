@@ -1,36 +1,36 @@
-package one.digitalinnovation.personapi.Controller;
+package one.digitalinnovation.Controller;
 
-import lombok.AllArgsConstructor;
+import one.digitalinnovation.DTO.Response.MessageResponseDTO;
+import one.digitalinnovation.Repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import one.digitalinnovation.personapi.Entity.Person;
+
 /*import one.digitalinnovation.personapi.dto.request.PersonDTO;
-import one.digitalinnovation.personapi.dto.response.MessageResponseDTO;
+
 import one.digitalinnovation.personapi.exception.PersonNotFoundException;
 import one.digitalinnovation.personapi.services.PersonService;
  */
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
-
 //import javax.validation.Valid;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/people")
-@AllArgsConstructor(onConstructor = @__(@Autowired))
-
 public class PersonapiController {
 
-    @GetMapping
-    public String getPeople(){
-         return  "Teste de API";
+    private PersonRepository personRepository;
+
+    @Autowired
+    public PersonapiController(PersonRepository personRepository){
+        this.personRepository = personRepository;
+    }
+
+    @PostMapping
+    public MessageResponseDTO createPerson(@RequestBody Person person){
+        Person savedPerson = personRepository.save(person);
+        return MessageResponseDTO.builder().message("Pessoa criada corretamente com ID:"+savedPerson.getId()).build();
     }
 
     /*private final PersonService personService;

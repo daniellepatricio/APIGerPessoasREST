@@ -1,6 +1,6 @@
-package one.digitalinnovation.personapi;
+package one.digitalinnovation;
 
-import one.digitalinnovation.personapi.Controller.PersonapiController;
+import one.digitalinnovation.Controller.PersonapiController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
