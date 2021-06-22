@@ -5,6 +5,7 @@ import one.digitalinnovation.personapi.Entity.Person;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+
 @Mapper(componentModel = "spring")
 public abstract class PersonMapper {
 
