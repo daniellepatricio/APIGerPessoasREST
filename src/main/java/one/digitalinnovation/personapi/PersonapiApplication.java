@@ -10,7 +10,6 @@ public class PersonapiApplication {
 		System.out.println( "API ON!");
 		SpringApplication.run(PersonapiApplication.class, args);
 	}
-		//SpringApplication.run(PersonapiApplication.class, args);
-		//PersonapiController.getPeople();
+
 
 }
