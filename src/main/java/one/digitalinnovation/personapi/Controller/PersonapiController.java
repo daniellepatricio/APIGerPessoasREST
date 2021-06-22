@@ -59,6 +59,12 @@ public class PersonapiController {
         return personService.update(id, personDTO);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) throws PersonNotFoundException {
+        personService.delete(id);
+    }
+
 }
 
 

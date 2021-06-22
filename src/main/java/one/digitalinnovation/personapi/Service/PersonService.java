@@ -63,4 +63,10 @@ public class PersonService {
         return messageResponse;
     }
 
+    public void delete(Long id) throws PersonNotFoundException {
+        personRepository.findById(id)
+                .orElseThrow(() -> new PersonNotFoundException(id));
+
+        personRepository.deleteById(id);
+    }
 }
