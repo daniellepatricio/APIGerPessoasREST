@@ -43,4 +43,12 @@ public class PersonService {
                 .message(s + id2)
                 .build();
     }
+
+    public PersonDTO findById(Long id) throws PersonNotFoundException {
+        Person person = personRepository.findById(id)
+                .orElseThrow(() -> new PersonNotFoundException(id));
+
+        return personMapper.toDTO(person);
+    }
+
 }

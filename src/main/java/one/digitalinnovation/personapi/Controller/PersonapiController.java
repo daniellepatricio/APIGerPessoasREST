@@ -47,7 +47,11 @@ public class PersonapiController {
         return personService.listAll();
     }
 
-
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+        return personService.findById(id);
+    }
 
 }
 
