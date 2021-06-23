@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Data
 @Builder
@@ -32,10 +33,10 @@ public class PersonDTO {
 
     @NotNull
     private String birthDate;
-/*
+
     @Valid
     @NotEmpty
     private List<PhoneDTO> phones;
 
- */
+
 }

@@ -3,9 +3,9 @@ package one.digitalinnovation.personapi.DTO.Request;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import one.digitalinnovation.personapi.Enum.PhoneType;
+
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.NotEmpty;
